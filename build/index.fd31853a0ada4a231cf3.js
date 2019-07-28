@@ -27125,7 +27125,8 @@ jquery(function () {
   rtm.on("MessageFromPeer", function (message, peerId) {
     console.log("message " + message.text + " peerId" + peerId);
     var view = jquery("<div/>", {
-      text: ["message.text: " + message.text, ", peer: ", peerId].join("")
+      //text: ["message.text: " + message.text, ", peer: ", peerId].join("")
+      text: [peerId + " : " + message.text].join("")
     });
     jquery("#log").append(view);
   });
@@ -27292,7 +27293,11 @@ jquery(function () {
 
     rtm.sendChannelMessage(params.channelMessage, params.channelName).then(function () {
       var view = jquery("<div/>", {
-        text: "(Channel Broadcast)" + rtm.accountName + ":" + params.channelMessage + " channel: " + params.channelName
+        text: "(Channel Broadcast) " + rtm.accountName + " : " + params.channelMessage
+        /*+
+        " channel: " +
+        params.channelName*/
+
       });
       jquery("#log").append(view);
     }).catch(function (err) {
@@ -27323,7 +27328,7 @@ jquery(function () {
     }*/
     {
       var view = jquery("<div/>", {
-        text: rtm.accountName +
+        text: "Me" +
         /*"(" +
         params.peerId +
         ")" +*/
@@ -27363,4 +27368,4 @@ jquery(function () {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=index.ada893b5a543d45c4300.js.map
+//# sourceMappingURL=index.fd31853a0ada4a231cf3.js.map

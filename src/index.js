@@ -31,7 +31,8 @@ $(() => {
   rtm.on("MessageFromPeer", (message, peerId) => {
     console.log("message " + message.text + " peerId" + peerId);
     const view = $("<div/>", {
-      text: ["message.text: " + message.text, ", peer: ", peerId].join("")
+      //text: ["message.text: " + message.text, ", peer: ", peerId].join("")
+      text: [peerId + " : " + message.text].join("")
     });
     $("#log").append(view);
   });
@@ -255,12 +256,12 @@ $(() => {
       .then(() => {
         const view = $("<div/>", {
           text:
-            "(Channel Broadcast)" +
+            "(Channel Broadcast) " +
             rtm.accountName +
-            ":" +
-            params.channelMessage +
+            " : " +
+            params.channelMessage /*+
             " channel: " +
-            params.channelName
+            params.channelName*/
         });
         $("#log").append(view);
       })
@@ -299,7 +300,7 @@ $(() => {
         {
           const view = $("<div/>", {
             text:
-              rtm.accountName +
+              "Me" +
               /*"(" +
               params.peerId +
               ")" +*/
