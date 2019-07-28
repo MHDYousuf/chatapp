@@ -1,3 +1,4 @@
+//const fs = require("fs");
 import "./assets/styles.scss";
 import * as $ from "jquery";
 import * as M from "materialize-css";
@@ -5,9 +6,45 @@ import * as M from "materialize-css";
 import RtmClient from "./rtm-client";
 import { Toast, validator, serializeFormData } from "./common";
 
+/*const DiscoveryV1 = require("ibm-watson/discovery/v1");
+var discovery = new DiscoveryV1({
+  version: "2018-03-19",
+  username: "fadhilfaisal@ieee.org",
+  password: "fadhil@1997"
+});
+discovery.listEnvironments((err, res) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(JSON.stringify(res, null, 2));
+  }
+});*/
+/*var VisualRecognitionV3 = require("ibm-watson/visual-recognition/v3");*/
+/*var fs = require("fs");
+
+var visualRecognition = new VisualRecognitionV3({
+  url: "<service_url>",
+  version: "2018-03-19",
+  iam_apikey: "2bD2GP8g-R5-GHxF-_ze1oclTBYtI0O5-zjtWvS2fGuB"
+});
+
+var params = {
+  images_file: fs.createReadStream("./resources/car.png")
+};
+
+visualRecognition
+  .classify(params)
+  .then(result => {
+    console.log(JSON.stringify(result, null, 2));
+  })
+  .catch(err => {
+    console.log(err);
+  });*/
+/*var VisualRecognitionV3 = require("watson-developer-cloud/visual-recognition/v3");*/
+//import { fs } from "fs";
+//var fs = require("fs");
 $(() => {
   M.AutoInit();
-
   let rtm = new RtmClient();
 
   rtm.on("ConnectionStateChanged", (newState, reason) => {
