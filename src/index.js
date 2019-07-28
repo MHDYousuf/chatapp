@@ -255,9 +255,9 @@ $(() => {
       .then(() => {
         const view = $("<div/>", {
           text:
-            "account: " +
+            "(Channel Broadcast)" +
             rtm.accountName +
-            " send : " +
+            ":" +
             params.channelMessage +
             " channel: " +
             params.channelName

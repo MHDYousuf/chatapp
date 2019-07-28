@@ -27292,7 +27292,7 @@ jquery(function () {
 
     rtm.sendChannelMessage(params.channelMessage, params.channelName).then(function () {
       var view = jquery("<div/>", {
-        text: "account: " + rtm.accountName + " send : " + params.channelMessage + " channel: " + params.channelName
+        text: "(Channel Broadcast)" + rtm.accountName + ":" + params.channelMessage + " channel: " + params.channelName
       });
       jquery("#log").append(view);
     }).catch(function (err) {
@@ -27363,4 +27363,4 @@ jquery(function () {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=index.f847cd726faac2860f17.js.map
+//# sourceMappingURL=index.ada893b5a543d45c4300.js.map
