@@ -45,6 +45,6 @@
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
   },
-  "author": "agora",
-  "license": "ISC"
+  "author": "Mohammed Yousuf, Shahal KP, Vishnu Vijayan, Arjun K T",
+  "license": "MIT"
 }
