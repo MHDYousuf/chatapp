@@ -1,5 +1,5 @@
 {
-  "name": "One-to-One-Video",
+  "name": "Med Bay",
   "version": "2.8.0",
   "description": "Agora-Web-Tutorial - One-to-One Video",
   "keywords": [
@@ -8,7 +8,10 @@
     "webrtc",
     "agora-example",
     "webpack",
-    "javascript"
+    "javascript",
+    "IBM Watson",
+    "machine learning",
+    "django"
   ],
   "main": "index.js",
   "scripts": {
